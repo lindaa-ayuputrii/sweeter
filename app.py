@@ -202,9 +202,6 @@ def get_posts():
                 {"post_id": post["_id"], "type": "thumbs"}
             )
 
-
-
-
             post["heart_by_me"] = bool(
                 db.likes.find_one(
                     {"post_id": post["_id"], "type": "heart", "username": payload["id"]}
